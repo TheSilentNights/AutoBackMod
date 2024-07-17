@@ -15,6 +15,11 @@ public class SetMaxTick extends CommandBase {
     }
 
     @Override
+    public boolean checkPermission(MinecraftServer server, ICommandSender sender) {
+        return true;
+    }
+
+    @Override
     public String getUsage(ICommandSender iCommandSender) {
         return "";
     }
