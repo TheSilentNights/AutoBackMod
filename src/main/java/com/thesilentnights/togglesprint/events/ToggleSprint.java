@@ -1,4 +1,4 @@
-package com.thesilentnights.autoback.events;
+package com.thesilentnights.togglesprint.events;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;

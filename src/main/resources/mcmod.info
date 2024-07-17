@@ -1,7 +1,7 @@
 [
 {
-  "modid": "autoback",
-  "name": "AutoBack",
+  "modid": "togglesprint",
+  "name": "ToggleSprint",
   "description": "Example placeholder mod.",
   "version": "${version}",
   "mcversion": "${mcversion}",
