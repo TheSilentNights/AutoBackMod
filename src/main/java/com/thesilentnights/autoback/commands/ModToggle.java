@@ -1,5 +1,6 @@
 package com.thesilentnights.autoback.commands;
 
+import com.thesilentnights.autoback.config.Config;
 import com.thesilentnights.autoback.repo.State;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
@@ -26,11 +27,13 @@ public class ModToggle extends CommandBase {
         }
         if (args[0].equals("off")) {
             State.isEnabled = false;
+            Config.saveBoolean("ifEnabled", false);
             iCommandSender.sendMessage(new TextComponentString("autoback mod off"));
-        }else if (args[0].equals("on")) {
+        } else if (args[0].equals("on")) {
             State.isEnabled = true;
+            Config.saveBoolean("ifEnabled", true);
             iCommandSender.sendMessage(new TextComponentString("autoback mod on"));
-        }else {
+        } else {
             iCommandSender.sendMessage(new TextComponentString("param must be \"off\" or \"on\""));
         }
     }

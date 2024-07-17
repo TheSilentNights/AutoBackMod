@@ -1,7 +1,7 @@
 [
 {
   "modid": "autoback",
-  "name": "Example Mod",
+  "name": "AutoBack",
   "description": "Example placeholder mod.",
   "version": "${version}",
   "mcversion": "${mcversion}",

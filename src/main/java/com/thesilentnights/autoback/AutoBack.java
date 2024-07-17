@@ -1,13 +1,11 @@
 package com.thesilentnights.autoback;
 
-import com.thesilentnights.autoback.commands.BackTest;
 import com.thesilentnights.autoback.commands.ModToggle;
 import com.thesilentnights.autoback.commands.SetMaxTick;
 import com.thesilentnights.autoback.config.Config;
 import com.thesilentnights.autoback.events.PlayerDieListener;
 import com.thesilentnights.autoback.events.TickEventListener;
-import net.minecraft.client.Minecraft;
-import net.minecraft.init.Blocks;
+import com.thesilentnights.autoback.events.ToggleSprint;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -36,10 +34,9 @@ public class AutoBack {
         //register listener
         MinecraftForge.EVENT_BUS.register(new PlayerDieListener());
         MinecraftForge.EVENT_BUS.register(new TickEventListener());
-
+        MinecraftForge.EVENT_BUS.register(new ToggleSprint());
         //register command
         ClientCommandHandler.instance.registerCommand(new ModToggle());
-        ClientCommandHandler.instance.registerCommand(new BackTest());
         ClientCommandHandler.instance.registerCommand(new SetMaxTick());
 
     }

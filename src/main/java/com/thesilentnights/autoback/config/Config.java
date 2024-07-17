@@ -16,6 +16,7 @@ public class Config {
 
     public static void saveInt(String key, int value) {
         configuration.get(Configuration.CATEGORY_GENERAL, key, value);
+        Config.save();
     }
 
     public static boolean getBoolean(String key) {
@@ -24,6 +25,7 @@ public class Config {
 
     public static void saveBoolean(String key, boolean value) {
         configuration.get(Configuration.CATEGORY_GENERAL, key, value);
+        Config.save();
     }
 
     public static void save() {

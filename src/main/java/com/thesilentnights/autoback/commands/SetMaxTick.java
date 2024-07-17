@@ -26,7 +26,7 @@ public class SetMaxTick extends CommandBase {
         }
         TickEventListener.setTick(Integer.parseInt(strings[0]));
         Config.saveInt("maxTick", Integer.parseInt(strings[0]));
-        Config.save();
+
         iCommandSender.sendMessage(new TextComponentString("set max tick to " + strings[0]));
     }
 }
